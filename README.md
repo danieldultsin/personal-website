@@ -2,7 +2,7 @@
 
 A modern, responsive personal website built with Next.js, React, and Tailwind CSS. This template provides a clean, professional design for showcasing your portfolio, blog, and personal information. Complete with multiple pages, integrated scheduling, and location-aware features.
 
-![Website Preview](https://dultsin.com)
+[Website Preview](https://dultsin.com)
 
 ## Features
 
@@ -94,7 +94,7 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## License
 
-This project is available as a template under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is available as a template under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 ### Important Notice
 
