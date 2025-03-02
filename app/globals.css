@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* dark theme colors (default) */
+  --background: #3c3c3c;
+  --foreground: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #d6d6d6;
+}
+
+.light-theme {
+  --background: #fcfcfc;
+  --foreground: #3c3c3c;
+  --text-primary: #3c3c3c;
+  --text-secondary: #3c3c3c;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* Ensure the root div fills the entire viewport */
+/*
+#__next, 
+div[data-nextjs-root-layout] {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+*/
+
+/* Ensure the main content area grows to fill available space */
+/*
+main {
+  flex: 1;
+}
+*/
+
+@layer base {
+  h1 {
+    @apply text-[4rem] font-semibold leading-normal text-foreground;
+  }
+
+  h2 {
+    @apply text-[2.25rem] text-foreground font-semibold leading-normal;
+  }
+
+  h3 {
+    @apply text-[1.5rem] font-semibold leading-normal;
+  }
+
+  p {
+    @apply text-[1.125rem] font-light leading-[1.5rem] tracking-[0.4%] text-text-secondary;
+  }
+
+  li {
+    @apply text-[1.125rem] font-normal leading-[1.625rem] tracking-[0.4%] text-text-secondary;
+  }
+}
+
+@layer components {
+  .nav-container {
+    @apply max-w-6xl mx-auto flex justify-center items-center space-x-6;
+  }
+
+  .nav-link {
+    @apply hover:text-text-secondary text-foreground transition-colors duration-200 text-xl font-normal;
+  }
+
+  .social-icon-container {
+    @apply flex items-center justify-center 
+      w-14 h-14 
+      bg-background hover:bg-[#323232] transition-all duration-200 
+      rounded-2xl border border-[#777777];
+  }
+
+  .social-icon {
+    @apply w-6 h-6;
+  }
+
+  .history-container {
+    @apply p-6 bg-[#5a5a5a] rounded-2xl space-y-3;
+  }
+
+  .history-header {
+    @apply flex justify-between items-center;
+  }
+
+  .history-date {
+    @apply text-text-secondary text-base tracking-[0.06px] leading-[26px];
+  }
+
+  .history-content {
+    @apply leading-[1.625rem];
+  }
+
+  /* for /consulting and /contact pages */
+  .description-content {
+    @apply text-[1.125rem] font-normal leading-[1.625rem] tracking-[0.4%] text-text-secondary;
+  }
+
+  .status-bar {
+    @apply hidden md:flex justify-start md:justify-end items-center gap-4 text-[#FFD014] text-[.875rem];
+  }
+
+  /* hide status bar on secondary (light theme) pages */
+  [class*="light-theme"] .status-bar {
+    @apply hidden;
+  }
+}
