@@ -7,9 +7,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dultsin.com"),
   title: "Daniel Dultsin | Homepage",
   description:
     "Personal website and publications of Daniel Dultsin. A businessman with expertise in B2B sales, CRM optimization, GTM strategy, software, and written media.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Daniel Dultsin",
     "Business",
@@ -52,9 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`${inter.className} antialiased min-h-full`}>
-        <div className="flex flex-col min-h-screen bg-background">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );
